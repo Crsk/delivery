@@ -1,0 +1,11 @@
+<div class="row no-gutters">
+  <div class="col-3">
+    <button (click)="removeFromCart()" class="btn btn-block btn-agregarquitar">-</button>
+  </div>
+  <div (click)="addToCart()" class="col text-center pt-2 text-encarro">
+    {{ shoppingCart.getQuantity(product) }}
+  </div>
+  <div class="col-3">
+    <button (click)="addToCart()" class="btn btn-block btn-agregarquitar">+</button>
+  </div>
+</div>

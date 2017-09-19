@@ -1,0 +1,18 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-encarro {
+    background-color: rgba(0, 0, 0, 0.48);
+    color: white;
+    cursor: pointer;
+    width: 76px;
+}
+
+.btn-agregarquitar {
+    border-radius: 0px;
+    height: 29px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.48);    
+    border: 0px;
+}

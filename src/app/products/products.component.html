@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-3 col-xs-12">
+    <product-filter [category]="category"></product-filter>
+  </div>
+  <div class="col">
+    <div style="height: 30px;"></div>
+    <div class="row d-flex justify-content-start" *ngIf="cart$ | async as cart">
+      <ng-container *ngFor="let p of filteredProducts; let i = index">
+        <div class="col-md-6 col-lg-4" class="img-responsive" style="margin: 0 auto;">
+          <product-card [product]="p" [shopping-cart]="cart"></product-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

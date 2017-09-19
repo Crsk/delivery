@@ -1,0 +1,40 @@
+<form #f="ngForm" (ngSubmit)="placeOrder()">
+  <div class="form-group">
+    <label for="">Nombre</label>
+    <input #name="ngModel" [(ngModel)]="shipping.name" name="name" id="name" type="text" class="form-control" required>
+    <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+      Requerido
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Direccion</label>
+    <div class="input-group">
+      <input #address="ngModel" [(ngModel)]="shipping.address" name="address" id="address" type="text" class="form-control" required>
+    </div>
+    <div class="alert alert-danger" *ngIf="address.touched && address.invalid">
+      <div *ngIf="address.errors.required">Requerido</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Comentario</label>
+    <div class="input-group">
+      <input #comment="ngModel" [(ngModel)]="shipping.comment" name="comment" id="comment" type="text" class="form-control" required>
+    </div>
+    <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
+      <div *ngIf="comment.errors.required">Requerido</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="">Ciudad</label>
+    <div class="input-group">
+      <input #city="ngModel" [(ngModel)]="shipping.city" name="city" id="city" type="text" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+        Requerido
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary">Enviar</button>
+</form>
