@@ -5,25 +5,6 @@
       <product-filter [category]="category"></product-filter>
     </div>
     <div class="col ml-5">
-      <div style="height: 30px;"></div>
-      <div class="row d-flex justify-content-start" *ngIf="cart$ | async as cart">
-        <div *ngFor="let p of filteredProducts; let i = index">
-          <div class="col-md-6 col-lg-4" class="img-responsive">
-            <product-card [product]="p" [shopping-cart]="cart"></product-card>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-<div class="container fix" [@fadeIn]="fadeIn">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 mr-5">
-      <product-filter [category]="category"></product-filter>
-    </div>
-    <div class="col ml-5">
       <div style="height: 20px;"></div>
       <ngx-masonry class="row d-flex justify-content-start" *ngIf="cart$ | async as cart">
         <ngx-masonry-item *ngFor="let p of filteredProducts; let i = index">
@@ -32,6 +13,30 @@
           </div>
         </ngx-masonry-item>
       </ngx-masonry>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="fix ml-5 mr-5" [@fadeIn]="fadeIn">
+  <div class="row">
+    <div class="col-xl-7 col-md-12 col-sm-12">
+      <div style="height: 20px;"></div>
+      <div class="row">
+        <div class="col-12 pb-3">
+          <product-filter [category]="category"></product-filter>
+        </div>
+      </div>
+      <ngx-masonry class="row d-flex justify-content-start" *ngIf="cart$ | async as cart">
+        <ngx-masonry-item *ngFor="let p of filteredProducts; let i = index">
+          <div class="col-md-6 col-lg-4" class="img-responsive">
+            <product-card [product]="p" [shopping-cart]="cart"></product-card>
+          </div>
+        </ngx-masonry-item>
+      </ngx-masonry>
+    </div>
+    <div class="col-xl-5 col-md-12 col-sm-12">
+      <app-shopping-cart></app-shopping-cart>
     </div>
   </div>
 </div>

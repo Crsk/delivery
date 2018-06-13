@@ -1,15 +1,14 @@
-<div class="container fix">
-
-  <h1>Carrito</h1>
-  <div class="row " *ngIf="cart$ | async as cart">
+<div class="sticky-top fix" >
+  <h1 class="center">MI PEDIDO</h1>
+  <div *ngIf="cart$ | async as cart">
     <div class="col-12">
-      <p>
+      <p class="center">
         Tienes {{ cart.totalItemsCount }} items en tu carro de compras.
         <button *ngIf="cart.items.length" (click)="clearCart()" class="btn btn-light btn-sm">Vaciar carro</button>
       </p>
     </div>
 
-    <div class="col-6">
+    <div>
       <table class="table">
         <thead>
           <th></th>
@@ -34,7 +33,7 @@
             <th></th>
             <th></th>
             <th></th>
-            <th class="text-right">${{ cart.totalPrice | number }}</th>
+            <th class="text-right">TOTAL A PAGAR: ${{ cart.totalPrice | number }}</th>
           </tr>
         </tfoot>
       </table>
