@@ -4,6 +4,7 @@ import { ProductService } from './product/product.service';
 import { CategoryService } from './category/category.service';
 import { AdminAuthGuard } from './admin-auth-guard/admin-auth-guard.service';
 import { UserService } from './user/user.service';
+import { ContactoService } from './contacto/contacto.service';
 
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
@@ -104,25 +105,25 @@ import { SeleccionService } from './seleccion/seleccion.service';
       { path: 'order-success/:id', component: OrderSuccessComponent , canActivate: [AuthGuard] },
       { path: 'my-orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
 
-      { 
-        path: 'admin/products/new', 
-        component: ProductFormComponent, 
+      {
+        path: 'admin/products/new',
+        component: ProductFormComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       },
-      { 
-        path: 'admin/products/:id', 
-        component: ProductFormComponent, 
+      {
+        path: 'admin/products/:id',
+        component: ProductFormComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       },
-      { 
-        path: 'admin/products', 
-        component: AdminProductsComponent, 
+      {
+        path: 'admin/products',
+        component: AdminProductsComponent,
         canActivate: [AuthGuard, AdminAuthGuard]
       },
-      { 
-        path: 'admin/orders', 
-        component: AdminOrdersComponent, 
-        canActivate: [AuthGuard, AdminAuthGuard] 
+      {
+        path: 'admin/orders',
+        component: AdminOrdersComponent,
+        canActivate: [AuthGuard, AdminAuthGuard]
       },
     ])
   ],
@@ -137,7 +138,8 @@ import { SeleccionService } from './seleccion/seleccion.service';
     SeleccionService,
     ProductService,
     ShoppingCartService,
-    OrderService
+    OrderService,
+    ContactoService
   ],
   bootstrap: [AppComponent]
 })

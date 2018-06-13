@@ -1,10 +1,41 @@
-<div class="container fix">
+<div class="">
 
-  <p>
-    contacto works!
-  </p>
+  <div class="background" id="grad1">
+      <div class="header">
+          <div class="container" style="padding-top: 100px;">
+              <div class="row center">
+                  <div class="col-sm-12 title">Escríbenos, queremos saber de tí</div>
+              </div>
+          </div>
+      </div>
+      <div class="body">
+          <div class="container" style="padding-top: 100px;">
+              <div style="max-width: 400px;" class="center">
+                  <div class="row form">
+                      <div class="col-sm-12">
+                          <input class="form-control mt-4" type="text" #nombre placeholder="Nombre">
+                      </div>
+                      <div class="col-sm-12 col-md-6 mt-4">
+                          <input class="form-control" type="text" name="correo" #correo placeholder="Correo">
+                      </div>
+                      <div class="col-sm-12 col-md-6 mt-4">
+                          <input class="form-control" type="text" name="telefono" #telefono placeholder="Teléfono">
+                      </div>
+                      <div class="col-sm-12">
+                          <textarea class="form-control mt-4 textarea" rows="3" #mensaje placeholder="Mensaje" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="color: white;"></textarea>
+                      </div>
+                      <div class="col-12">
+                          <button class="btn btn-lg btn-dark mt-4" (click)="enviarMensaje(nombre, correo, telefono, mensaje)" style="width: 200px; color: #fff;">Enviar</button>
+                      </div>
+                  </div>
+              </div>
+              <div id="dweb" class="dweb_">
+                  <a href="https://dwebstudio.cl/">
+                      <img [src]="'assets/dweb_animated.svg'"> Desarrollado por D'webstudio
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
 
-  <button type="button" class="btn btn-primary mb-3" (click)="openModalWithComponent()">Create modal with component</button>
-
-  
 </div>

@@ -1,10 +1,16 @@
+#sushi-background {
+  background-color: #1E232B;
+}
+
+/*
 .background {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
 }
-
+*/
+/*
 .intro {
     height: 100%;
     width: 100%;
@@ -39,3 +45,4 @@
     font-weight: 900;
     font-size: 20px;
 }
+*/

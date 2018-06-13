@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<path fill="none" stroke="#e07d7d" stroke-width="8" stroke-miterlimit="10" d="M81.917,50c0,17.627-14.29,31.917-31.917,31.917
+	S18.083,67.627,18.083,50S32.373,18.083,50,18.083">
+<animateTransform attributeName="transform"
+	attributeType="XML"
+	type="rotate"
+	from="0 50 50"
+	to="360 50 50"
+	dur="40s"
+	repeatCount="indefinite"/>
+</path>
+<path fill="none" stroke="#e07d7d" stroke-width="8" stroke-miterlimit="10" d="M27.917,50"/>
+<path fill="none" stroke="#e07d7d" stroke-width="6" stroke-miterlimit="10" d="M50.001,29.584c11.276,0,20.417,9.141,20.417,20.417
+	s-9.141,20.417-20.417,20.417s-20.417-9.141-20.417-20.417">
+	<animateTransform attributeName="transform"
+	attributeType="XML"
+	type="rotate"
+	from="0 50 50"
+	to="-360 50 50"
+	dur="20s"
+	repeatCount="indefinite"/>
+	</path>
+<circle fill="#e07d7d" stroke="#e07d7d" stroke-width="5" stroke-miterlimit="10" cx="50" cy="50" r="10"/>
+</svg>

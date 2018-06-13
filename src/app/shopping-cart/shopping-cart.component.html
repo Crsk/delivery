@@ -1,43 +1,37 @@
-<div class="sticky-top fix" >
+<div class="sticky-top fix center" style="max-width: 600px;">
   <h1 class="center">MI PEDIDO</h1>
   <div *ngIf="cart$ | async as cart">
     <div class="col-12">
       <p class="center">
-        Tienes {{ cart.totalItemsCount }} items en tu carro de compras.
-        <button *ngIf="cart.items.length" (click)="clearCart()" class="btn btn-light btn-sm">Vaciar carro</button>
+        <!--Tienes {{ cart.totalItemsCount }} items en tu carro de compras.-->
+        <!--<button *ngIf="cart.items.length" (click)="clearCart()" class="btn btn-light btn-sm">Vaciar carro</button>-->
       </p>
     </div>
 
     <div>
-      <table class="table">
+      <table class="table borderless" style="background-color: #1E232B;">
+        <!--
         <thead>
           <th></th>
-          <th>Producto</th>
+          <th class="center">Producto</th>
           <th class="text-center" width=140>Cantidad</th>
           <th class="text-right">Precio</th>
         </thead>
+      -->
         <tbody>
           <tr *ngFor="let item of cart.items">
             <td>
               <div [style.backgroundImage]="'url(' + item.imageUrl + ')'" class="thumbnail" alt=""></div>
             </td>
-            <td>{{ item.title }}</td>
-            <td>
+            <td style="padding-top: 30px;">{{ item.title }}</td>
+            <td style="padding-top: 30px;">
               <product-quantity [product]="item" [shopping-cart]="cart"></product-quantity>
             </td>
-            <td class="text-right">${{ item.totalPrice | number }}</td>
+            <td class="text-right" style="padding-top: 30px;">${{ item.totalPrice | number }}</td>
           </tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th class="text-right">TOTAL A PAGAR: ${{ cart.totalPrice | number }}</th>
-          </tr>
-        </tfoot>
       </table>
-      <a *ngIf="cart.items.length" routerLink="/check-out" class="btn btn-info">Pagar</a>
+      <a *ngIf="cart.items.length" routerLink="/check-out" class="btn btn-lg" style="width: 100%; background-color: #20bf6b; color: white; font-weight: bold;">Pagar (${{ cart.totalPrice | number }})</a>
     </div>
 
   </div>
