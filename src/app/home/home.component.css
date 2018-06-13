@@ -1,0 +1,41 @@
+.background {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url('../../assets/intro3.jpg');
+    display: table;
+    top: 0;
+    background-size: cover;
+}
+
+.intro .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    font-weight: 900;
+    color: #b71803;
+}
+
+.menu-go {
+    color: #f27d00;
+    font-weight: 900;
+    font-size: 20px;
+}

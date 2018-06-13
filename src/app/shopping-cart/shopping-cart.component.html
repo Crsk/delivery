@@ -1,16 +1,15 @@
-<h1>Carrito</h1>
-<div class="row " *ngIf="cart$ | async as cart">
-  <div class="col-12">
-    <p>
-      Tienes {{ cart.totalItemsCount }} items en tu carro de compras.
-      <button 
-        *ngIf="cart.items.length"
-        (click)="clearCart()" 
-        class="btn btn-light btn-sm">Vaciar carro</button>
-    </p>
-  </div>
+<div class="container fix">
 
-  <div class="col-6">
+  <h1>Carrito</h1>
+  <div class="row " *ngIf="cart$ | async as cart">
+    <div class="col-12">
+      <p>
+        Tienes {{ cart.totalItemsCount }} items en tu carro de compras.
+        <button *ngIf="cart.items.length" (click)="clearCart()" class="btn btn-light btn-sm">Vaciar carro</button>
+      </p>
+    </div>
+
+    <div class="col-6">
       <table class="table">
         <thead>
           <th></th>
@@ -39,10 +38,8 @@
           </tr>
         </tfoot>
       </table>
-      <a 
-        *ngIf="cart.items.length" 
-        routerLink="/check-out"
-        class="btn btn-primary">Pagar</a>
+      <a *ngIf="cart.items.length" routerLink="/check-out" class="btn btn-info">Pagar</a>
     </div>
 
+  </div>
 </div>

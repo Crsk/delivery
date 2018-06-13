@@ -1,9 +1,12 @@
-<h4 class="pb-4">Título</h4>
-<div class="row" *ngIf="cart$ | async as cart">
-  <div class="col-6">
-    <shipping-form [cart]="cart"></shipping-form>
-  </div>
-  <div class="col-6">
-    <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
+<div class="container fix">
+
+  <h4 class="pb-4">Ya casi...</h4>
+  <div class="row center" *ngIf="cart$ | async as cart" style="max-width: 400px;">
+    <div class="col-sm-12 col-md-12">
+      <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
+    </div>
+    <div class="col-sm-12 col-md-12 pt-4">
+        <shipping-form [cart]="cart"></shipping-form>
+    </div>
   </div>
 </div>

@@ -1,0 +1,26 @@
+<div class="container fix">
+  <h3>{{seleccionObj?.title}}</h3>
+  <p>Escoge 5 ingredientes</p>
+  <ngx-masonry>
+    <ngx-masonry-item *ngFor="let ingrediente of ingredientes$ | async">
+      <div (click)="add(ingrediente.nombre)" class="mb-3 ml-2 mr-2" style="cursor: pointer; width: 70px; text-align: center;">
+        <img [src]="ingrediente.imagenUrl" style="height: 44px;"><p>{{ingrediente.nombre}}</p>
+      </div>
+    </ngx-masonry-item>
+  </ngx-masonry>
+  <br>
+  <br>
+  <div *ngIf="bHayIngredientes && ingredientesFaltantes > 1">Tus ingredientes (faltan {{ingredientesFaltantes}}):</div>
+  <div *ngIf="bHayIngredientes && ingredientesFaltantes == 1">Tus ingredientes (falta 1):</div>
+  <div *ngIf="ingredientesFaltantes <= 0">Buena elección! puedes agregar más por $500 c/u</div>
+  <div class="pb-3 pt-3">
+    <div class="list-group" *ngFor="let ingrediente of ingredientes">
+      <div class="list-item">
+        <fa name="trash" (click)="remove(ingrediente)"></fa> {{ingrediente.nombre}}
+      </div>
+    </div>
+  </div>
+  <br>
+  <p>Total: ${{total}}</p>
+  <button class="btn btn-info mb-3" #agregarAlCarro [disabled]="noneSelected()">AGREGAR <fa name="shopping-cart"></fa></button>
+</div>

@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.2.4",
+    "@angular/animations": "^4.4.6",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
     "@angular/core": "^4.2.4",
@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
+    "@ngx-plus/ngx-alerts": "^0.6.0",
     "angular-4-data-table": "^0.2.3",
     "angular-font-awesome": "^2.0.3",
     "angularfire2": "^4.0.0-rc.1",
@@ -30,6 +31,10 @@
     "firebase": "^4.2.0",
     "font-awesome": "^4.7.0",
     "ng2-validation": "^4.2.0",
+    "ngx-animate": "^1.0.0",
+    "ngx-bootstrap": "^2.0.3",
+    "ngx-masonry": "^1.0.7",
+    "ngx-toastr": "^6.4.1-beta.0",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

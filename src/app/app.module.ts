@@ -40,6 +40,18 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ShippingFormComponent } from './shipping-form/shipping-form.component';
 
+import { NgxMasonryModule } from 'ngx-masonry';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ContactoComponent } from './contacto/contacto.component';
+import { EscogerIngredientesComponent } from './escoger-ingredientes/escoger-ingredientes.component';
+import { IngredientesComponent } from './ingredientes/ingredientes.component';
+import { IngredienteService } from './ingrediente/ingrediente.service';
+
+import { ToastrModule } from 'ngx-toastr';
+import { SeleccionService } from './seleccion/seleccion.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +70,13 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     ProductCardComponent,
     ProductQuantityComponent,
     ShoppingCartSummaryComponent,
-    ShippingFormComponent
+    ShippingFormComponent,
+    ContactoComponent,
+    EscogerIngredientesComponent,
+    IngredientesComponent
+  ],
+  entryComponents: [
+    EscogerIngredientesComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,12 +86,18 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    NgxMasonryModule,
+    BrowserAnimationsModule,
     AngularFontAwesomeModule,
+    ModalModule.forRoot(),
     NgbModule.forRoot(),
+    ToastrModule.forRoot(),
     RouterModule.forRoot([
-      { path: '', component: ProductsComponent },
+      { path: '', component: HomeComponent },
+      { path: 'menu', component: ProductsComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
+      { path: 'contacto', component: ContactoComponent },
       { path: 'login', component: LoginComponent },
 
       { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
@@ -109,6 +133,8 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     UserService,
     AdminAuthGuard,
     CategoryService,
+    IngredienteService,
+    SeleccionService,
     ProductService,
     ShoppingCartService,
     OrderService

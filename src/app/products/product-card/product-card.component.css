@@ -31,6 +31,8 @@
 
 .card-img-top {
     cursor: pointer;
+    width: 195px;
+    height: 146px;
 }
 
 .btn-agregarquitar {
