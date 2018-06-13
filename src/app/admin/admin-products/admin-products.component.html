@@ -1,15 +1,15 @@
-<!--
+
 <div class="container fix">
   <p>
     <a routerLink="/admin/products/new" class="btn btn-info">Nuevo</a>
   </p>
   <p>
-    <input 
+    <input
     #query
     (keyup)="filter(query.value)"
     type="text" class="form-control" placeholder="Buscar...">
   </p>
-  
+
   <data-table
   [items]="items"
   [itemCount]="itemCount"
@@ -43,4 +43,3 @@
 </data-table>
 
 </div>
--->
